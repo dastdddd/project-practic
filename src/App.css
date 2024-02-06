@@ -1,38 +1,218 @@
-.App {
-  text-align: center;
+body {
+  background-color: #777;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+  font-size: 4em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+img {
+  width: 400px;
+}
+
+/* -----------------------MyGrid--------------------------------------- */
+.grid1 {
+  margin-top: 50px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 150px 150px 150px 150px;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-areas: 'itm1 itm2 itm2 itm3'
+    'itm1 itm4 itm5 itm6'
+    'itm1 itm7 itm8 itm6';
+  gap: 10px;
+}
+
+.item {
+  border: 2px solid black;
+}
+
+.item1 {
+  grid-area: itm1;
+  background-color: green;
+}
+
+.item2 {
+  grid-area: itm2;
+  background-color: green;
+}
+
+.item3 {
+  grid-area: itm3;
+  background-color: red;
+}
+
+.item4 {
+  grid-area: itm4;
+  background-color: yellow;
+}
+
+.item5 {
+  grid-area: itm5;
+  background-color: red;
+}
+
+.item6 {
+  grid-area: itm6;
+  background-color: green;
+}
+
+.item7 {
+  grid-area: itm7;
+  background-color: red;
+}
+
+.item8 {
+  grid-area: itm8;
+  background-color: yellow;
+}
+
+/* ------------------------------MyGrid1------------------------- */
+.grid2 {
+  margin-top: 30px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 70px 70px 70px 70px 70px 70px;
+  grid-template-areas: 'header header header'
+    'sidebar content1 content1'
+    'sidebar content1 content1'
+    'sidebar content2 content3'
+    'sidebar content2 content3'
+    'footer footer footer';
+  gap: 15px;
+}
+
+.items {
+  border: 5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.header {
+  grid-area: header;
+  background-color: rgb(160, 93, 216);
+  gap: 20px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: rgb(29, 146, 117);
   display: flex;
   flex-direction: column;
+  gap: 20px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.content1 {
+  grid-area: content1;
+  background-color: rgb(20, 137, 158);
+  display: flex;
+  gap: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content2 {
+  grid-area: content2;
+  background-color: rgb(20, 137, 158);
+}
+
+.content3 {
+  grid-area: content3;
+  background-color: rgb(20, 137, 158);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(160, 93, 216);
+  gap: 30px;
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+/* ----------------------products------------------ */
+.products-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.products-item {
+  width: 200px;
+  padding: 0px 5px;
+  border: 1px solid rgb(0, 255, 106);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.products-item:hover {
+  background-color: #2a444e;
+}
+
+.products-item p {
+  margin: 5px 0px;
+}
+
+.products-title {
+  font-size: 20px;
+  color: #ffbcbc;
+}
+
+.products-price {
+  color: #94e1ff;
+}
+
+/* --------------------data1--------------------- */
+.data1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.data1-flex {
+  width: 250px;
+  height: 400px;
+  border: 3px solid rgba(58, 193, 255, 0.527);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #25644f;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.data1-flex:hover {
+  background-color: #37886d;
+}
+
+.data1-flex p {
+  margin: 0;
+  padding: 5px 5px;
+}
+
+.images img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.data1-title {
+  letter-spacing: 2px;
+  text-align: center;
+  color: #e9dcdc;
+}
+
+.data1-price {
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: #efff5a;
 }
